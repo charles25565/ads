@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+falsepositives="google.com|yahoo.com|aol.com|opera.com|disqus.com"
+explicits="ads.google.com doubleclick.net"
+# Downloading
+wget -q https://wordpress.com/ads.txt -O wordpress.txt
+wget -q https://cnn.com/ads.txt -O cnn.txt
+wget -q https://foxnews.com/ads.txt -O foxnews.txt
+wget -q https://modrinth.com/ads.txt -O modrinth.txt
+# Processing
+base=$(cat *.txt |\
+ cut -f1 -d, |\
+ grep -v \# |\
+ tr [:upper:] [:lower:] |\
+ sort |\
+ uniq -d |\
+ grep -Ev $falsepositives |\
+ xargs)
+for domain in $base $explicits; do
+ echo $domain
+ echo \*.${domain}
+done
