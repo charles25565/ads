@@ -20,6 +20,7 @@ base=$(cat *.txt |\
  sort |\
  uniq |\
  xargs)
+# Outputting 
 for domain in $base $explicits; do
  echo $domain
  echo \*.${domain}
