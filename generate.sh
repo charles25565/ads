@@ -13,7 +13,7 @@ base=$(cat *.txt |\
  grep -v \# |\
  tr [:upper:] [:lower:] |\
  sort |\
- uniq -d |\
+ uniq |\
  grep -Ev $falsepositives |\
  xargs)
 for domain in $base $explicits; do
