@@ -3,21 +3,16 @@ name: Generation
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-24.04
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Run a one-line script
         run: ./generate.sh > filterlist.txt
-      
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
