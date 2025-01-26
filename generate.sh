@@ -16,9 +16,9 @@ base=$(cat *.txt |\
  grep -v \# |\
  grep -v subdomain= |\
  tr [:upper:] [:lower:] |\
+ grep -Ev $falsepositives |\
  sort |\
  uniq |\
- grep -Ev $falsepositives |\
  xargs)
 for domain in $base $explicits; do
  echo $domain
