@@ -1,4 +1,4 @@
-# AdsList
+# ads
 
 Filterlist of domains listed in various "ads.txt" files. uBlock Origin is able to understand these.
 
