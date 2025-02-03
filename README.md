@@ -1,5 +1,8 @@
 # ads
 
+> [!IMPORTANT]
+> Do not use GitHub for pushes, contribution, etc. Use [this repo](https://git.disroot.org/charles8191/ads) instead.
+
 Filterlist of domains listed in various "ads.txt" files. uBlock Origin is able to understand these.
 
 Some are explicitly added and some are explicitly whitelisted.
