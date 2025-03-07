@@ -14,7 +14,7 @@ wait
 base=$(cat *.txt |\
  cut -f1 -d, |\
  grep -v \# |\
- grep -v subdomain= |\
+ grep -v = |\
  tr [:upper:] [:lower:] |\
  grep -Ev $falsepositives |\
  sort |\
