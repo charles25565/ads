@@ -6,4 +6,4 @@ Some are explicitly added and some are explicitly whitelisted.
 
 ## Usage
 
-Just add `https://github.com/charles8191/ads/releases/download/continuous/filterlist.txt` to your adblocker! Tested with uBlock Origin. Note that it uses bare domains with wildcards rather than AdBlock Plus syntax.
+Just add `https://github.com/charles25565/ads/releases/download/continuous/filterlist.txt` to your adblocker! Tested with uBlock Origin. Note that it uses bare domains with wildcards rather than AdBlock Plus syntax.
