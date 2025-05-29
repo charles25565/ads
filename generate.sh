@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 falsepositives="google.com|yahoo.com|aol.com|opera.com|disqus.com|foxnews.com"
-explicits="ads.google.com doubleclick.net g.doubleclick.net"
+explicits="ads.google.com doubleclick.net"
 # Downloading
 wget -q https://wordpress.com/ads.txt -O wordpress.txt &
 wget -q https://cnn.com/ads.txt -O cnn.txt &
