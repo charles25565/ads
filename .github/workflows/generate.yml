@@ -11,10 +11,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Generate
-        run: ./generate.sh > filterlist.txt
-      - name: Release
-        uses: softprops/action-gh-release@v2
+      - run: ./generate.sh > filterlist.txt
+      - uses: softprops/action-gh-release@v2
         with:
           name: Filterlists
           files: filterlist.txt
