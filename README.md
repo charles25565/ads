@@ -1,6 +1,6 @@
 # ads
 
-Filterlist of domains listed in various "ads.txt" files.
+Filterlist of domains listed in various `ads.txt` files.
 
 Some are explicitly added and some are explicitly whitelisted.
 
